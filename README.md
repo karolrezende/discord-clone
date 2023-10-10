@@ -17,3 +17,6 @@ Principais Recursos:
 - ORM usando Prisma
 - Banco de dados MySQL usando Planetscale
 - Autenticação com Clerk
+
+#YOUTUBE TUTORIAL
+https://www.youtube.com/watch?v=ZbX4Ok9YX94&list=LL&index=2&t=3031s&ab_channel=CodeWithAntonio
