@@ -17,6 +17,8 @@ export default function FileUpload({onChange, value, endpoint}: FileUploadThing)
     return(
       <div className='relative h-20 w-20' >
         <Image fill src={value} alt="Upload" className='rounded-full'/>
+        <button onClick={()=> onChange('')} className='bg'/>
+        <X className='h-4 w-4'/>
       </div>
     )
   }
