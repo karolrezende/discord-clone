@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import FileUpload from "../ui/file-upload";
 
 import axios from 'axios'
-import useRouter from 'next/navigation'
+import {useRouter} from 'next/navigation'
 
 const formSchema = z.object({
 name: z.string().min(1, {
@@ -39,13 +39,15 @@ const form = useForm({
     imageUrl: "",
   }
 });
-
+const router = useRouter()
 const isLoading = form.formState.isSubmitting;
 
 const onSubmit = async (values: z.infer<typeof formSchema>) => {
   try {
     await axios.post('/api/servers', values)
     form.reset()
+    router.refresh()
+    window.location.reload()
   } catch (error) {
     console.log(error)
     
@@ -55,8 +57,6 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
 if (!isMounted) {
   return null;
 }
-
-const router = useRouter()
 return (
   <Dialog open>
     <DialogContent className="bg-white text-black p-0 overflow-hidden">
