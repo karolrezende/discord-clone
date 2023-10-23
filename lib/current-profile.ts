@@ -2,17 +2,17 @@ import { auth } from "@clerk/nextjs";
 import { db } from "./database";
 
 export async function currentProfile() {
-    const {userId} = auth()
+    const {userId} = auth() //extrai o userid do clerk
 
     if(!userId){
-        return null
+        return null //se nao tiver usuario, retorna null
     }
 
     const profile = await db.profile.findUnique({
         where:{
-            userId
+            userId //se tiver procura o user clerk dentro do db
         }
     })
 
-    return profile
+    return profile //retorna profile
 }

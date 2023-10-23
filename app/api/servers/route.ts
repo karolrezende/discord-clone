@@ -8,7 +8,7 @@ export async function POST(req: Request){
         const profile = currentProfile()
 
         if(!profile){
-            return new NextResponse("Unauthorized", 401)
+            return new NextResponse("Unauthorized", {status: 401})
         }
     } catch (error) {
         console.log("[servers_error]", error)
