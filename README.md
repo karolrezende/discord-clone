@@ -17,3 +17,4 @@ Principais Recursos:
 - ORM usando Prisma
 - Banco de dados MySQL usando Planetscale
 - Autenticação com Clerk
+- Manipulação de estados com zustand
