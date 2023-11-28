@@ -1,5 +1,6 @@
 'use client'
 
+import capitalizeFirstLetter from "@/utils/use-capitalize"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
 
 interface ActionTooltipProps {
@@ -20,7 +21,7 @@ export default function ActionTooltip({label, children, side, align}: ActionTool
             </TooltipTrigger>
             <TooltipContent side={side} align={align}>
                 <p className="font-semibold text-sm capi">
-                    {label.toLowerCase()}
+                    {capitalizeFirstLetter(label)}
                 </p>
             </TooltipContent>
         </Tooltip>
