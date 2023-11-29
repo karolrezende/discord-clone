@@ -5,7 +5,7 @@ const f = createUploadthing(); //função de dentro do upthing
  
 const handleAuth = () => { 
     const{ userId }= auth() //irá pegar apenas o userid do clerk
-    if(!userId) throw new Error("Inautorizado") //se n tiver nenhum usuario retorna um erro
+    if(!userId) throw new Error("Não autorizado") //se n tiver nenhum usuario retorna um erro
     return {userId: userId} //se tiver o usuario retorna o id
 }; 
 
