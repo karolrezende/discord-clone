@@ -30,10 +30,10 @@ import { useModal } from "@/hooks/use-modal-store";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Server name is required."
+    message: "Karol eh linda, mas digite o nome do servidor"
   }),
   imageUrl: z.string().min(1, {
-    message: "Server image is required."
+    message: "Escolha uma imagem"
   })
 });
 
